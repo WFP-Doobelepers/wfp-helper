@@ -1,2 +1,2 @@
 # wfp-helper
-Helper Bot for Specialized tasks on WFP
+Helper Bot for Specialized tasks on WFP.
