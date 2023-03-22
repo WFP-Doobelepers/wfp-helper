@@ -2,3 +2,4 @@ src/config.json
 node_modules
 .eslintrc.json
 dist
+db/boomerlist.json

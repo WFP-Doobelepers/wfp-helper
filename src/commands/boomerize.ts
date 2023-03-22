@@ -16,7 +16,7 @@ module.exports = {
     async execute(interaction: CommandInteraction<CacheType>): Promise<void> {
         await interaction.deferReply()
 
-        const file = fs.readFileSync('./commands/boomerlist.json', 'utf8')
+        const file = fs.readFileSync('../db/boomerlist.json', 'utf8')
         let userList = JSON.parse(file)
 
         if (userList.users.indexOf(interaction.user.id) === -1) {
@@ -64,6 +64,6 @@ module.exports = {
             await interaction.editReply(`Added user ${user.username} to boomer list.`)
         }
 
-        fs.writeFileSync('./commands/boomerlist.json', JSON.stringify(userList))     
+        fs.writeFileSync('../db/boomerlist.json', JSON.stringify(userList))     
     }
 }

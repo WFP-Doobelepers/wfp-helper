@@ -10,7 +10,7 @@ module.exports = {
     async execute(interaction: CommandInteraction<CacheType>): Promise<void> {
         await interaction.deferReply()
 
-        const file = fs.readFileSync('./commands/boomerlist.json', 'utf8')
+        const file = fs.readFileSync('../db/boomerlist.json', 'utf8')
         let userList = JSON.parse(file)
 
         if (userList.users.indexOf(interaction.user.id) === -1) {
